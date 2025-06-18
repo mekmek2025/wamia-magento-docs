@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  output: 'export',
   trailingSlash: true,
   images: {
-    unoptimized: true,
+    unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === "production" ? "/wamia-magento-docs" : "",
-  basePath: process.env.NODE_ENV === "production" ? "/wamia-magento-docs" : "",
-};
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/wamia-magento-docs' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/wamia-magento-docs' : ''
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

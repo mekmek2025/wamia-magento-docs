@@ -161,10 +161,10 @@
     "zwitch": "^2.0.4"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "export": "npm run build && node scripts/generate-sitemap.js && ./create-nojekyll.sh",
+    "dev": "npx next dev",
+    "build": "npx next build",
+    "start": "npx next start",
+    "export": "npx next build && node scripts/generate-sitemap.js && ./create-nojekyll.sh",
     "deploy": "npm run export"
   },
   "keywords": [],

@@ -55,14 +55,15 @@ function generateSitemap() {
     .join('')}
 </urlset>`;
 
-  // Write sitemap to public directory
-  const publicDir = path.join(process.cwd(), 'public');
-  if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true });
+  // Write sitemap to out directory (after Next.js build)
+  const outDir = path.join(process.cwd(), 'out');
+  if (!fs.existsSync(outDir)) {
+    console.error('Out directory does not exist. Make sure to run this after Next.js build.');
+    return;
   }
   
-  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
-  console.log(`Generated sitemap with ${paths.length} pages`);
+  fs.writeFileSync(path.join(outDir, 'sitemap.xml'), sitemap);
+  console.log(`Generated sitemap with ${paths.length} pages in out/sitemap.xml`);
 }
 
 // Run if called directly

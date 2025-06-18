@@ -162,9 +162,9 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-sitemap.js && next build",
+    "build": "next build",
     "start": "next start",
-    "export": "npm run build && ./create-nojekyll.sh",
+    "export": "npm run build && node scripts/generate-sitemap.js && ./create-nojekyll.sh",
     "deploy": "npm run export"
   },
   "keywords": [],

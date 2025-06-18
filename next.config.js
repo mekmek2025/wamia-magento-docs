@@ -7,10 +7,6 @@ const nextConfig = {
   },
   assetPrefix: process.env.NODE_ENV === "production" ? "/wamia-magento-docs" : "",
   basePath: process.env.NODE_ENV === "production" ? "/wamia-magento-docs" : "",
-  // Ensure all dynamic routes are generated at build time
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
-  },
 };
 
 module.exports = nextConfig;

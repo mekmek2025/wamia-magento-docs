@@ -30,6 +30,8 @@ jobs:
       
     - name: Build website
       run: npm run export
+      env:
+        GITHUB_ACTIONS: true
       
     - name: Setup Pages
       if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'

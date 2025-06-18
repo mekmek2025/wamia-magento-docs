@@ -5,8 +5,9 @@ const nextConfig = {
   images: {
     unoptimized: true
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/wamia-magento-docs' : '',
-  basePath: process.env.NODE_ENV === 'production' ? '/wamia-magento-docs' : ''
+  // Temporarily disable basePath to test if this fixes the routing
+  // assetPrefix: '/wamia-magento-docs',
+  // basePath: '/wamia-magento-docs'
 }
 
 module.exports = nextConfig
